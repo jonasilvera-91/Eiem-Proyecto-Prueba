@@ -1,24 +1,6 @@
 
 @use "variables" as v;
 
-.carousel{
-    @include v.mobile{
-        height: 20vh;
-    }
-    .carousel-indicators{
-        @include v.mobile{
-            bottom: -50px;
-        }
-    }
-    .carousel-inner{
-        img{
-            @include v.mobile{
-                height:25vh;
-            }
-        }
-    }
-}
-
 
 .main-content {
   max-width: 1200px;
@@ -54,5 +36,24 @@
         }
     }
 }
+
+.carousel{
+    @include v.mobile{
+        height: 20vh;
+    }
+    .carousel-indicators{
+        @include v.mobile{
+            bottom: -50px;
+        }
+    }
+    .carousel-inner{
+        img{
+            @include v.mobile{
+                height:25vh;
+            }
+        }
+    }
+}
+
 
 

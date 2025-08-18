@@ -173,22 +173,6 @@ main .services-grid .service-item:hover {
   height: 28px;
 }
 
-@media (max-width: 430px) {
-  .carousel {
-    height: 20vh;
-  }
-}
-@media (max-width: 430px) {
-  .carousel .carousel-indicators {
-    bottom: -50px;
-  }
-}
-@media (max-width: 430px) {
-  .carousel .carousel-inner img {
-    height: 25vh;
-  }
-}
-
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -224,6 +208,22 @@ main .services-grid .service-item:hover {
 .main-content .services .service-card img {
   width: 80px;
   margin-bottom: 15px;
+}
+
+@media (max-width: 430px) {
+  .carousel {
+    height: 20vh;
+  }
+}
+@media (max-width: 430px) {
+  .carousel .carousel-indicators {
+    bottom: -50px;
+  }
+}
+@media (max-width: 430px) {
+  .carousel .carousel-inner img {
+    height: 25vh;
+  }
 }
 
 main .about-header {
