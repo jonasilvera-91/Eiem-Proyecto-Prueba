@@ -1,0 +1,39 @@
+@use "variables" as v;
+@use "anims";
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  background: #6FD2FC;
+  background: linear-gradient(164deg,rgba(111, 210, 252, 1) 0%, rgba(72, 117, 232, 1) 30%, rgba(72, 117, 232, 1) 70%, rgba(111, 210, 252, 1) 100%);
+  color: #fff;
+  padding: 20px 30px;
+  margin-top: 40px;
+  width: 100%;
+  @include v.mobile{
+    flex-direction: column;
+    gap: 10px;
+  }
+  p{
+    font-size: 0.95rem;
+    color: #fff;  
+  }
+  .social-links{
+    display: flex;
+    gap: 15px;
+    a{
+       .icono-wp{
+        height: 40px;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        @extend %vibratewp;
+       } 
+       .icono-redes{
+        height: 28px;
+       }
+    }  
+  }
+
+}

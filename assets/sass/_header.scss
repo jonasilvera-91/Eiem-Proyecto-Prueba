@@ -1,0 +1,60 @@
+
+@use "variables" as v;
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #6FD2FC;
+  background: linear-gradient(164deg,rgba(111, 210, 252, 1) 0%, rgba(72, 117, 232, 1) 30%, rgba(72, 117, 232, 1) 70%, rgba(111, 210, 252, 1) 100%);
+  color: #fff;
+  padding: 8px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 15vh;
+  @include v.mobile{
+    padding: 0px 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: auto;
+    
+  }
+  nav{
+        div{
+            a{
+                .logo{
+                height: 150px;
+                width: auto;
+                @include v.mobile{
+                    height: 120px;
+                }
+                 }
+              }
+             }
+      }
+       .nav-list{
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        @include v.mobile{
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+            a{
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 8px 12px;
+                transition: background 0.3s ease;
+                &:hover{
+                    background-color: #004080;
+                    border-radius: 4px;
+                }
+            }
+       }
+       
+}

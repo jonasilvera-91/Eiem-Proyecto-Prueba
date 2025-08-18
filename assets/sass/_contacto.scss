@@ -1,0 +1,81 @@
+
+@use "variables" as v;
+
+main{
+   .contact-header{
+        text-align: center;
+        margin: 40px auto;
+        max-width: 800px;
+        p{
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 10px; 
+        }
+   } 
+   .contact-container{
+        display: flex;
+        gap: 40px;
+        margin: 50px 0;
+        @include v.mobile{
+          flex-direction: column;  
+        }
+        .contact-form{
+            flex: 1;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            form{
+                display: flex;
+                flex-direction: column;
+                label{
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    color: #003366;
+                }
+                input, select, textarea{
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                }
+                .form-buttons{
+                    display: flex;
+                    gap: 15px;
+                    .btn-contact{
+                        @extend %botonformulario;
+                    }
+                    .btn-contact.secondary{
+                        @extend %botonformulario;
+                        background-color: #ccc;
+                        color: #333;
+                        &:hover{
+                          background-color: #999;
+                         }
+                    }   
+                }
+            }
+        }
+        .contact-info{
+           flex: 1;
+           h2{
+                font-size: 1.2rem;
+                color: #0059B2;
+                margin: 20px 0 10px;
+            } 
+            .iframe-container{
+                width: 100%;
+                height: 250px;
+                margin-bottom: 20px;
+                iframe{
+                   width: 100%;
+                    height: 100%;
+                    border-radius: 6px;
+                    border: none; 
+                }
+            }
+        }
+
+    }
+}

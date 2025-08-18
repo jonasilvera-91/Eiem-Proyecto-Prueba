@@ -1,0 +1,69 @@
+
+@use "variables" as v;
+
+main{
+    .about-header{
+        text-align: center;
+        margin: 40px auto;
+        max-width: 800px;
+        p{
+          font: size 1.1rem;
+          color:#555;
+          margin-top: 10px;  
+        }
+    }
+    .about-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px 0;
+        gap: 20px;
+        @include v.mobile{
+            flex-direction: column;
+            text-align: center;
+        }
+        .about-text {
+            flex: 1;
+            max-width: 500px;
+            h2{
+               color: #0059B2;
+                margin-bottom: 15px; 
+                }
+            p{
+                color: #444;
+                font-size: 1rem;
+             }
+            .values-list {
+                list-style: none;
+                padding: 0;
+                li{
+                    background: #F0F8FF;
+                    margin: 8px 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    color: #003366;
+                }
+             }
+            }
+        .about-img{
+            img{
+                width: 100%;
+                max-width: 400px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                @include v.mobile{
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+    .about-block.reverse {
+        flex-direction: row-reverse;
+        @include v.mobile{
+            flex-direction: column;
+        }
+    }
+    
+
+}

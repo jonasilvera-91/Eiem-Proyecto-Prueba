@@ -1,0 +1,62 @@
+
+$fuente:Arial, sans-serif;
+$colorbody:#F5F8FA;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:$fuente;
+  background-color:$colorbody;
+  color: #1C1C1C;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  font-weight: 700;
+  color: #003366;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+%botonformulario{
+  padding: 10px 20px;
+  background-color: #0059B2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  &:hover{
+    background-color: #003366;
+  }
+}
+
+@mixin mobile{
+  @media (max-width: 430px){
+    @content;
+  }
+}
+

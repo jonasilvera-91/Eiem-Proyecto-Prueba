@@ -1,0 +1,79 @@
+@use "variables" as v;
+@use "anims";
+
+
+
+main{
+    .services-header{
+        text-align: center;
+        margin: 40px auto;
+        max-width: 800px;
+        p{
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 10px;  
+        }
+    }
+    .services-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin: 50px 0;
+        @include v.mobile{
+            grid-template-columns: 1fr;
+        }
+        .service-item{
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            &:hover{
+                @extend %servicios;
+            }
+            img{
+                width: 100px;
+                margin-bottom: 15px; 
+            }
+            h2{
+                color: #0059B2;
+                font-size: 1.3rem;
+                margin-bottom: 10px;  
+            }
+            p{
+                font-size: 1rem;
+                color: #444;
+                margin-bottom: 15px; 
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                margin-bottom: 15px;
+                li{
+                    background: #F0F8FF;
+                    margin: 6px 0;
+                    padding: 8px;
+                    border-radius: 4px;
+                    color: #003366;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+            .btn-service{
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #0059B2;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                &:hover{
+                    background-color: #003366;
+                }
+            }
+        }
+    }
+}

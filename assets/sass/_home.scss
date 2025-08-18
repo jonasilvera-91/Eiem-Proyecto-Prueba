@@ -1,0 +1,58 @@
+
+@use "variables" as v;
+
+.carousel{
+    @include v.mobile{
+        height: 20vh;
+    }
+    .carousel-indicators{
+        @include v.mobile{
+            bottom: -50px;
+        }
+    }
+    .carousel-inner{
+        img{
+            @include v.mobile{
+                height:25vh;
+            }
+        }
+    }
+}
+
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+    .intro {
+        text-align: center;
+        margin: 40px auto;
+        max-width: 900px;
+        }
+    .services {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+        gap: 30px;
+        margin: 50px 0;
+        @include v.mobile{
+            grid-template-columns: 1fr;
+        }
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            &:hover{
+                transform: translateY(-5px);
+            }
+            img{
+               width: 80px;
+               margin-bottom: 15px; 
+            }
+        }
+    }
+}
+
+
